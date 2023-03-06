@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 4.6 Nomor 1</title>
+    <link rel="stylesheet" href="Tugas 4.6.1.css">
+    <script language="Javascript">
+      function test() {
+        var val1 = document.kirim.T1.value;
+        if (val1 <= 40) document.kirim.T2.value = "E";
+        else if (41 <= val1 && 55 >= val1) document.kirim.T2.value = "D";
+        else if (56 <= val1 && 60 >= val1) document.kirim.T2.value = "C";
+        else if (61 <= val1 && 65 >= val1) document.kirim.T2.value = "BC";
+        else if (66 <= val1 && 70 >= val1) document.kirim.T2.value = "B";
+        else if (71 <= val1 && 80 >= val1) document.kirim.T2.value = "AB";
+        else if (81 <= val1 && 100 >= val1) document.kirim.T2.value = "A";
+        else window.alert("NULL!");
+      }
+    </script>
+  </head>
+  <!--Input konversi nilai-->
+<body>
+    <div class="center">
+        <h1>Konversi Nilai</h1>
+        <form method="post" name="kirim">
+            <div class="field">
+                <label> Nilai : </label>
+                <input type="text" name="T1" required>
+            </div>
+            <div class="field">
+                <label> Hasil Konversi Huruf : </label>
+                <input type="text" name="T2">
+            </div>
+            <br>
+            <input type="button" value="Konversi" name="konversi" onclick=test()>
+        </form>
+    </div>
+    <footer>
+        <h4> &copy; Copyright Putri Dia Lestari | 21082010035</h3>
+    </footer>
+</body>
+</html>

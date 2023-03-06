@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KALKULATOR SEDERHANA</title>
+    <link rel="stylesheet" href="Tugas 4.6.2.css">
+    <script language="Javascript">
+        function test() {
+            document.getElementById("p1").innerHTML = "dimodifikasi terakhir pada " + document.lastModified;
+        }
+
+        function btambah() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) + parseInt(document.kirim.text2.value);
+            test();
+        }
+
+        function bkurang() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) - parseInt(document.kirim.text2.value);
+            test();
+        }   
+
+        function bkali() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) * parseInt(document.kirim.text2.value);
+            test();
+        }
+
+        function bbagi() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) / parseInt(document.kirim.text2.value);
+            test();
+        }
+        function reset() { 
+            document.kirim.reset();
+        }
+    </script>
+  </head>
+  <body>
+    <body>
+        <div class="center">
+            <h1>Kalkulator Sederhana</h1>
+            <!--INPUT BILANGAN-->
+            <form method="post" name="kirim">
+                <div class="field">
+                    <label> Bilangan Pertama : </label>
+                    <input type="text" name="text1" required>
+                </div>
+                <div class="field">
+                    <label> Bilangan Kedua : </label>
+                    <input type="text" name="text2">
+                </div>
+                <div class="field">
+                    <label> Hasil : </label>
+                    <input type="text" name="hasil" disabled>
+                </div>
+                <!-- BUTTON OPERATOR KALKULATOR -->
+                <div class="tombol">
+                    <input type="button" value="+" name="plus" onclick=btambah()>
+                    <input type="button" value="-" name="minus" onclick=bkurang()>
+                    <input type="button" value="x" name="kali" onclick=bkali()>
+                    <input type="button" value="/" name="bagi" onclick=bbagi()>
+                </div>
+                <center>
+                     <input type="button" value="reset" onclick="reset()">
+                </center>
+               
+                <p id="p1"></p>
+            </form>
+        </div>
+        <footer>
+            <h4> &copy; Copyright Putri Dia Lestari | 21082010035</h3>
+        </footer>
+    </body>
+  </body>
+</html>
